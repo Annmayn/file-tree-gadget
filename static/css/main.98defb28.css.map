@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.98defb28.css","mappings":"AAAA,KACI,YACJ,CAEA,cACI,gBACJ,CAEA,cACI,UACJ,CAEA,aACI,qBACJ","sources":["App.css"],"sourcesContent":["body{\n    padding: 10px;\n}\n\n.folder-child{\n    margin-left: 50px;\n}\n\n.folder-add > i{\n    height: 5px;\n}\n\n.folder-info {\n    padding: 10px 20px 0 0;\n}"],"names":[],"sourceRoot":""}
