@@ -87,7 +87,7 @@ const File = (props) => {
     jpeg: 'file image outline icon',
     mp3: 'headphones icon',
     mp4: 'video icon',
-    default: ''
+    default: 'file icon'
   }
   const extension = props.name ? props.name.split('.').pop() : 'default'
   return <h4><i className={iconMap[extension]}></i>{props.name}</h4>
