@@ -48,7 +48,6 @@ class Folder extends React.Component {
 
     const handleAddClickFolder = () => {
       var data = this.state.data
-      console.log(this.state);
       var new_section = <Folder name={this.state.add_new} />
       data.push(new_section)
       this.setState({ 'data': data })
@@ -57,7 +56,6 @@ class Folder extends React.Component {
 
     const handleAddClickFile = () => {
       var data = this.state.data
-      console.log(this.state);
       var new_section = <File name={this.state.add_new} />
       data.push(new_section)
       this.setState({ 'data': data })
@@ -71,10 +69,10 @@ class Folder extends React.Component {
         {name}
       </span>
       <input value={this.state.add_new} onChange={(e) => handleInput(e.target.value)} type="text" />
-      <span className='folder-add' onClick={handleAddClickFile}>
+      <span className='folder-add' title='Create new file' onClick={handleAddClickFile}>
         <i className='file icon' />
       </span>
-      <span className='folder-add' onClick={handleAddClickFolder}>
+      <span className='folder-add' title="Create new folder" onClick={handleAddClickFolder}>
         <i className='folder icon' />
       </span>
       {this.state.isOpen && child.map((it) => { return <div key={this.state.num++} className='folder-child'> {it} </div> })}
@@ -91,7 +89,6 @@ const File = (props) => {
     mp4: 'video icon',
     default: ''
   }
-  console.log('props=>', props)
   const extension = props.name ? props.name.split('.').pop() : 'default'
   return <h4><i className={iconMap[extension]}></i>{props.name}</h4>
 }
